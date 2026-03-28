@@ -185,7 +185,7 @@ export default function CourseDetailPage({
                           .replace(/^### (.*$)/gim, '<h3>$1</h3>')
                           .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
                           .replace(/^\- (.*$)/gim, '<li>$1</li>')
-                          .replace(/(<li>.*<\/li>)/s, '<ul>$1</ul>')
+                          .replace(/(<li>[\s\S]*<\/li>)/, '<ul>$1</ul>')
                           .replace(/\n\n/g, '</p><p>')
                           .replace(/^\> (.*$)/gim, '<blockquote><p>$1</p></blockquote>')
                           .replace(/\|(.*)\|/g, (match) => {
